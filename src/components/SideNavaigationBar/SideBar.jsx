@@ -7,6 +7,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import HelpIcon from '@mui/icons-material/Help';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
 import { useState,useEffect } from "react";
 
 const SideBar = () => {
@@ -22,7 +23,7 @@ const SideBar = () => {
 
       sections.forEach(section => {
   
-        const sectionTop = section.offsetTop - 200; // Adjust the offset as needed
+        const sectionTop = section.offsetTop - 200; 
         const sectionHeight = section.clientHeight;
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
           currentActive = section.id;
@@ -53,9 +54,12 @@ const SideBar = () => {
 
       <div className="flex justify-between items-center w-full">
         {/* -------------logo------------ */}
-        <div className="">
-          <h1 className="text-2xl font-bold text-lime-500">Carbon</h1>
+        <div className="flex items-center">
+            <div className="text-4xl font-bold text-lime-500"><WhatshotOutlinedIcon style={{fontSize:"50px"}}/></div>
+         <div>
+         <h1 className="text-2xl font-bold text-lime-500">Carbon</h1>
           <h2 className="text-xl font-medium text-lime-500">Cell</h2>
+         </div>
         </div>
         {/* -----------menu icon------------ */}
         <div onClick={()=>setIsOpened(!isOpened)}>
@@ -100,7 +104,7 @@ const SideBar = () => {
         <span className="text-left ">Settings</span>
       </div>
 
-{/* ---------------users---------------- */}
+{/* ---------------user---------------- */}
       <div className="text-white w-full flex justify-between p-4 bg-[#333333] rounded-lg my-4 max-lg:hidden">
           <div className="">
               <img src=""/>

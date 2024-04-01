@@ -23,7 +23,7 @@ const Carousel = ({ id }) => {
 
   return (
    <div className='flex  overflow-hidden'>
-     <div className="relative w-[100%] overflow-hidden p-4 m-2 ">
+     <div className="relative w-[100%] overflow-hidden p-4 m-2 max-md:p-1 ">
       <div id={id} className="flex gap-4 overflow-x-auto scrollbar-hide p-2 flex-wrap justify-around">
       {trendindCoins.map((coin) => {
           return <Coin coin={coin} />;
